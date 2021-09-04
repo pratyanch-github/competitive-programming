@@ -11,6 +11,9 @@ xor is represented by (^)  and also known as odd 1 calculator  .
    2. (x^y)^z = x^(y^z)    ( xor is associative )
    3. x^x = 0 
    4. x^0 = x
+   5. for any boolean values a,b,c, we have a=b if and only if    (a xor c) = (b xor c)
+      Hence, the equation (x xor y) = z is equivalent to          (x xor y) xor x = (z xor x)
+      which in turn (by the cancellation law), simplifies to      y = (z xor x)
    
 -> XOR is equivalent to adding the bit representations modulo 2.
    Therefore it is commutative, associative, and reversible because 
@@ -27,6 +30,8 @@ xor is represented by (^)  and also known as odd 1 calculator  .
    bits in the two numbers modulo 2.
    
    visit : https://florian.github.io/xor-trick/ for more tricks of xor.
+   
+   
    
    
      
