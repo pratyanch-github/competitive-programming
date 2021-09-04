@@ -1,0 +1,32 @@
+xor is represented by (^)  and also known as odd 1 calculator  .
+
+-> Truth table 
+   0 ^ 0 = 0
+   0 ^ 1 = 1
+   1 ^ 0 = 1
+   1 ^ 1 = 0  
+
+-> Properties of xor:
+   1. x^y = y^x            ( xor is commutative )
+   2. (x^y)^z = x^(y^z)    ( xor is associative )
+   3. x^x = 0 
+   4. x^0 = x
+   
+-> XOR is equivalent to adding the bit representations modulo 2.
+   Therefore it is commutative, associative, and reversible because 
+   addition modulo any positive integer n has these properties.   
+   
+   Suppose, we're xor-ing the two numbers 2 and 3. Let's do it below:
+     (10)⊕(11) = (01) 
+    (Bit no.)	(First number)	(Second number)	 ⊕	  Sum  	   Sum (mod2)
+     1st bit  	 0	              1	           1	  1	          1
+     2nd bit	   1	              1	           0	  2	          0
+     
+   we can see that taking xor between two numbers is essentially the same as,
+   for each bit positions separately, taking the sum of the two corresponding 
+   bits in the two numbers modulo 2.
+   
+   visit : https://florian.github.io/xor-trick/ for more tricks of xor.
+   
+   
+     
