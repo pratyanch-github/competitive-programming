@@ -1,1 +1,2 @@
-
+In most problems on bitwise operations, 
+it is a good approach to try to handle each bit separately and combine the answer.
