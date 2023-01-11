@@ -1,0 +1,26 @@
+find for each index in an array- next/prev element smaller/greater 
+
+vector<int>prevSmaller(n,-1),nextSmaller(n,n);
+   stack<int>st;
+    for(int i=0;i<n;i++){
+        
+          while(!st.empty()&&arr[st.top()]>arr[i]){
+              nextSmaller[st.top()]=i;
+              st.pop();
+          }
+          st.push(i);
+      }
+
+     while(!st.empty())st.pop();
+
+      for(auto ele: nextSmaller)cout<<ele<<" ";
+      cout<<endl;   
+      for(int i=n-1;i>=0;i--){
+          while(!st.empty()&&arr[st.top()]>arr[i]){
+             prevSmaller[st.top()]=i;
+             st.pop();
+          }
+          st.push(i);
+      }
+      for(auto ele: prevSmaller)cout<<ele<<" ";
+      cout<<endl; 
