@@ -1,4 +1,5 @@
 find for each index in an array- next/prev element smaller/greater 
+watch aditya verma stack.
 
 void solve(){
    int n;
