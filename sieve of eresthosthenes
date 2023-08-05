@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+/
+void solve(){
+   vector<bool> isprime(100001,true);
+   isprime[0]=false;
+   isprime[1]=false;
+   for(int i=2; i*i<100001; i++) 
+   {
+   	 if(isprime[i])
+   	 {  
+	
+			// Any multiple of i less than i * i would have already been 
+			// marked as non-prime by a previous smaller prime. For example,
+			//  if i is 5, then 5 * 2, 5 * 3, and 5 * 4 would have been marked
+			//   as non-prime when processing the numbers 2, 3, and 4 respectively.
+			//  So, there is no need to mark them again, as it would be redundant.
+
+   	 	for(int j=i*i; j<1000001; j+=i)isprime[j]=false;
+   	 }
+   }
+}
+
+int main(){
+  ios_base::sync_with_stdio(0);cin.tie(0); cout.tie(0);
+
+  int t=1;
+  cin>>t;
+  for(int i=0;i<t;i++){
+    solve();
+  }
+}
